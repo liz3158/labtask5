@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<!--Liz Wong Wan Qi 20DDT10F1019 DDT4A-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/index.css">
+        <title>Planet Company App</title>
+        <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+        <script src="jquery-1.10.1.js"></script>
+        <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <script>
+        function onLoad()
+            {
+                  document.addEventListener("deviceready", onDeviceReady, true);
+            }
+
+            function exitFromApp()
+             {
+                navigator.app.exitApp();
+             }
+             </script>
+        
+    </head>
+    <body onload="onLoad();">
+        <div data-role="page" id="home">
+            <div data-role="header">
+                <h1>Planet Company</h1>
+                <div data-role="navbar" class="navbar">
+                    <ul>
+                        <li><a href="#home" data-transition="flip">Home</a></li>
+                        <li><a href="#our-team" data-transition="flip">Our Team</a></li>
+                        <li><a href="#contact-us" data-transition="flip">Contact Us</a></li>
+                        <li><a href="#detail" data-transition="flip">Detail</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div data-role="content">
+                <font color=""><h2>USING SPACE TO HELP LIFE ON EARTH</h2></font>
+                <p>Planet is driven by a mission to image all of Earth’s landmass every day, and make global change visible, 
+                    accessible and actionable.</p>
+
+                <img src="img/planet.gif" width="380" height="215">
+
+                <p>WHY PLANET</p>
+                <h2>Capture Your Window of Opportunity</h2>
+                <p>Planet was founded with the mission to image the Earth every day and make change visible, accessible,
+                     and actionable. Over the past decade with our customers, Planet has revolutionized the Earth 
+                     observation industry, democratizing access to satellite data beyond the traditional agriculture
+                      and defense sectors.</p>
+                <h5>To that end, Planet provides the leading web-geo platform with the highest frequency satellite data 
+                    available and foundational analytics to derive insights, empowering users across the world to make 
+                    impactful, timely decisions.</h5>
+
+                <h2>How We’re Different</h2>
+                <p>Planet’s platform processes and distributes a global, near-daily stream of satellite data into the
+                     workflows of our customers and partners, enabling them to quickly build applications that evolve 
+                     and respond to our rapidly changing world.</p>
+                <h5>What drives value for our customers and partners
+                    <ol>
+                        <li>High-Frequency, Global Coverage</li>
+                        <li>Analysis-Ready Data</li>
+                        <li>Seamless Access & Integration</li>
+                        <li>Trusted Partner</li>
+                    </ol>
+                </h5>
+
+            </div>
+            <div data-role="footer" data-position="fixed">
+    
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#home" data-icon="back">Back</a></li>
+                        <li><button name="buttonClick" data-icon="delete" onclick="exitFromApp()">Exit</button></li>
+                        <li><a href="#our-team" data-icon="forward">Next</a></li>
+                    </ul>
+                </div>
+                <center>
+                    <button id = "dialogAlert">ALERT</button>
+                    <button id = "cordovaDevice">CORDOVA DEVICE</button>
+                    <button id = "cameraTakePicture">TAKE PICTURE</button>
+                    <img id = "myImage"></img>
+                </center>
+            </div>
+        </div>
+        <div data-role="page" id="our-team">
+            <div data-role="header">
+                <h1>Planet Company</h1>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#home" data-transition="flip">Home</a></li>
+                        <li><a href="#our-team" data-transition="flip">Our Team</a></li>
+                        <li><a href="#contact-us" data-transition="flip">Contact Us</a></li>
+                        <li><a href="#detail" data-transition="flip">Detail</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div data-role="content">
+                <div style="text-align: center;">
+                    <p>Meet Our Teen</p>
+                    <h4>CHANGE THE WORLD WITH US</h4>
+                    <h5>We’re a team of rocket scientists, software engineers, creatives, business strategists, 
+                        and researchers. We get excited by hard problems, love breaking world records, and strive
+                        to make the world a better place every day.</h5>
+                </div>
+                
+                <ul data-role="listview" data-inset="true">
+                    <li data-role="list-divider">Members</li>
+                    <li><img src="img/person1.webp">
+                        <p>Co-founder and CEO — Will Marshall</p>
+                    </li>
+                    <li><img src="img/person2.webp">
+                        <p>Co-Founder and Chief Strategy Officer — Robbie Schingler</p>
+                    </li>
+                    <li><img src="img/person3.webp">
+                        <p>Chief Financial and Operating Officer —
+
+                            Ashley Fieglein Johnson</p>
+                    </li>
+                    <li><img src="img/person4.webp">
+                        <p>President Product and Business —
+
+                            Kevin Weil</p>
+                    </li>
+                    <li><img src="img/person5.webp">
+                        <p>Chief Legal and Compliance Officer —
+
+                            Laura Malinasky</p>
+                    </li>
+                    <li><img src="img/person6.webp">
+                        <p>Chief Marketing Officer —
+
+                            Rosanne Saccone</p>
+                    </li>
+                    <li><img src="img/person7.webp">
+                        <p>SVP, Space Systems —
+
+                            James Mason</p>
+                    </li>
+                    <li><img src="img/person8.webp">
+                        <p>Chief Strategist and Chairman of the Board, Planet Federal —
+
+                            Robert Cardillo</p>
+                    </li>
+                </ul>
+    
+            </div>
+            <div data-role="footer" data-position="fixed">
+    
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#home" data-icon="back">Back</a></li>
+                        <li><button name="buttonClick" data-icon="delete" onclick="exitFromApp()">Exit</button></li>
+                        <li><a href="#contact-us" data-icon="forward">Next</a></li>
+                    </ul>
+                </div>
+                <center>
+                    <button id = "dialogAlert">ALERT</button>
+                    <button id = "cordovaDevice">CORDOVA DEVICE</button>
+                    <button id = "cameraTakePicture">TAKE PICTURE</button>
+                    <img id = "myImage"></img>
+                </center>
+            </div>
+        </div>
+        <div data-role="page" id="contact-us">
+            <div data-role="header">
+                <h1>Planet Company</h1>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#home" data-transition="flip">Home</a></li>
+                        <li><a href="#our-team" data-transition="flip">Our Team</a></li>
+                        <li><a href="#contact-us" data-transition="flip">Contact Us</a></li>
+                        <li><a href="#detail" data-transition="flip">Detail</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div data-role="content">
+                <img src="img/emel.gif" width="380" height="255">
+                <form method="post">
+                    <div data-role="fieldcontain">
+                        <label for="name">Name</label>
+                        <input type="name" id="email">
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="email">Email</label>
+                        <input type="email" id="email">
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="">Message</label>
+                        <input type="text" id="email">
+                    </div>
+                    
+                    <div align="center">
+                        <input type="reset" value="Reset" data-inline="true">
+                        <input type="submit" value="Submit" data-inline="true">
+                    </div>
+                </form>
+                
+            </div>
+            <div data-role="footer" data-position="fixed">
+    
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#our-team" data-icon="back">Back</a></li>
+                        <li><button name="buttonClick" data-icon="delete" onclick="exitFromApp()">Exit</button></li>
+                        <li><a href="#detail" data-icon="forward">Next</a></li>
+                    </ul>
+                </div>
+                <center>
+                    <button id = "dialogAlert">ALERT</button>
+                    <button id = "cordovaDevice">CORDOVA DEVICE</button>
+                    <button id = "cameraTakePicture">TAKE PICTURE</button>
+                    <img id = "myImage"></img>
+                </center>
+            </div>
+        </div>
+        <div data-role="page" id="detail">
+            <div data-role="header">
+                <h1>Planet Company</h1>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#home" data-transition="flip">Home</a></li>
+                        <li><a href="#our-team" data-transition="flip">Our Team</a></li>
+                        <li><a href="#contact-us" data-transition="flip">Contact Us</a></li>
+                        <li><a href="#detail" data-transition="flip">Detail</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div data-role="content">
+                <iframe width="380" height="215" src="https://www.youtube.com/embed/iiKMGg5Qp8U" 
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                <h2>Our Constellation</h2>
+                <h3>Soaring Through Space and Time</h3>
+                <p>Planet embodies the philosophy of agile aerospace, a concept that advocates for the use of low-cost,
+                     lean electronics to innovate more rapidly in the fields of aerospace and aviation.</p>
+                <p>In ten years, Planet has flown on 30 successful launches and deployed 452 satellites—10 times that 
+                    of any competitor. Planet has over 150 satellites in orbit collecting over 350 million square 
+                    kilometers of imagery daily, with an unprecedented dataset of on average 1,300 images of every 
+                    location on Earth’s landmass.</p>
+
+                <p>Take a journey through our constellation of satellites, all of which are constantly improving in
+                     capability—and giving humanity a new way to look at our Earth with each new day.</p>
+
+                <h5>The globe below shows our satellites—represented by the white circles—continuously rotating around the Earth.</h5>
+                <img src="img/Media1.gif"  width="380" height="255">
+                <h2>Constellations</h2>
+                <p>Planet currently operates two constellations. The satellites that comprise each constellation have unique
+                     spatial, temporal, and radiometric resolutions, allowing us to capture Earth’s activities from multiple 
+                     perspectives and dimensions. Our Dove satellites are small—only 10x10x30 centimeters in size—which 
+                     allow us to launch for less cost, more often.</p>
+
+                <p>Planet acquired the RapidEye constellation in 2015, giving us one of the largest archives of 5 meter 
+                    resolution imagery and access to a global customer base. After operating for 11 years, outperforming
+                     its design life, the RapidEye constellation was retired in March 2020.</p>
+            </div>
+            <div data-role="footer" data-position="fixed">
+    
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#contact-us" data-icon="back">Back</a></li>
+                        <li><button name="buttonClick" data-icon="delete" onclick="exitFromApp()">Exit</button></li>
+                        <li><a href="#home" data-icon="forward">Next</a></li>
+                    </ul>
+                </div>
+
+                <script>
+
+                </script>
+                <center>
+                    <button id = "dialogAlert">ALERT</button>
+                    <button id = "cordovaDevice">CORDOVA DEVICE</button>
+                    <button id = "cameraTakePicture">TAKE PICTURE</button>
+                    <img id = "myImage"></img>
+                </center>
+                
+            </div>
+        </div>
+
+        <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
+        <script>document.getElementById("dialogAlert").addEventListener("click", dialogAlert);
+        function dialogAlert() {
+            alert("alert");
+            }
+
+        </script>
+    </body>
+</html>
